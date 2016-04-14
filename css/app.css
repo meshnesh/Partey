@@ -166,3 +166,64 @@ html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(8) {
  
 }
 
+/*EVENT SECTION*/
+container {
+  width: 100%;
+}
+
+/* Supporting */
+.supporting {
+        top: 85%;
+    position: relative;
+  background-color: #1c1c1c;
+  text-align: center;
+
+}
+
+.supporting .col {
+  float: left;
+  width: 28%;
+  padding: 10px;
+}
+
+.supporting .col2 {
+	float: left;
+  width: 28%;
+	margin: 0 0 0 15px;
+  padding: 10px;
+}
+
+.supporting .col3 {
+	float: right;
+  width: 28%;
+  padding: 10px;
+}
+
+.supporting h1,
+.supporting h2 {
+  color: #ffa800;
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.supporting p {
+  color: #efefef;
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.supporting .btn {
+  background-color: #eee;
+  color: #1c1c1c;
+  font-size: 18px;
+  padding: 8px 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+

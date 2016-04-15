@@ -1,11 +1,4 @@
 
-/*
-html body{
-  min-height: 100%;
-  min-width: 100%;
-    font-family: 'Lato', sans-serif;
-}
-*/
 
 html body input[type="checkbox"] {
   position: absolute;
@@ -13,14 +6,18 @@ html body input[type="checkbox"] {
   width: 0;
   display: none;
 }
+.menu nav a:nth-child(1) {
+     margin-top: 5%;
+}
 html body input[type="checkbox"]:checked ~ .menu nav a {
+       
   -webkit-transform: translate3d(0px, 0, 0) rotateY(0deg);
   transform: translate3d(0px, 0, 0) rotateY(0deg);
   -webkite-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  background: #252525;
+  background: #452B00;
   color: #fff;
 }
 html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(2) {
@@ -119,10 +116,14 @@ html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(8) {
 }
 
 .content label {
+    margin-left: 44%;
+        top: 49%;
+        border-radius: 5%;
   position: fixed;
   z-index: 1000;
   padding: 1rem 1.5rem;
   background: #222;
+    opacity: .7;
   font-size: 2rem;
   line-height: 2rem;
   color: #fff;
@@ -173,7 +174,7 @@ container {
 
 /* Supporting */
 .supporting {
-        top: 85%;
+    top: 85%;
     position: relative;
   background-color: #1c1c1c;
   text-align: center;
@@ -182,20 +183,20 @@ container {
 
 .supporting .col {
   float: left;
-  width: 28%;
+  width: 100%;
   padding: 10px;
 }
 
 .supporting .col2 {
 	float: left;
-  width: 28%;
+  width: 100%;
 	margin: 0 0 0 15px;
   padding: 10px;
 }
 
 .supporting .col3 {
 	float: right;
-  width: 28%;
+  width: 100%;
   padding: 10px;
 }
 
@@ -497,9 +498,11 @@ textarea:focus {
     font-size: 200px;
   }
 
+/*
   .supporting .col {
     width: 30%;
   }
+*/
 
   .supporting h2 {
     font-size: 40px;
@@ -514,7 +517,9 @@ textarea:focus {
   }
 }
 
-
+.medium-4{
+    padding-bottom: 2%;
+}
 
 
 

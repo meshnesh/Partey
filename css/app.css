@@ -406,6 +406,16 @@ input.message {
   padding-left: 45px;
 }
 
+
+
+/*
+input.email{
+    background-color: transparent;
+}
+*/
+
+
+
 ::-webkit-input-placeholder {
   color: #fff;
 }

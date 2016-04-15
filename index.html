@@ -7,6 +7,7 @@
     <title>Mingoo</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
+      <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   </head>
   <body>
 
@@ -139,9 +140,9 @@
       	<div class="footer">
 		<div class="container">
 			<form>
-  <input name="name" placeholder="What is your name?" class="name" required />
-  <input name="emailaddress" placeholder="What is your email?" class="email" type="email" required />
-  <textarea rows="4" cols="50" name="subject" placeholder="Please enter your message" class="message" required></textarea>
+  <input name="name" id="nameInput"placeholder="What is your name?" class="name" required />
+  <input name="emailaddress" id="emailInput"placeholder="What is your email?" class="email" type="email" required />
+  <textarea rows="4" cols="50" id="messageInput"name="subject" placeholder="Please enter your message" class="message" required></textarea>
   <input name="submit" class="btn" type="submit" value="Send" />
 </form>
 		</div>
@@ -150,7 +151,27 @@
 <!--      END OF FOOTER-->
       
     
-
+<script>
+      var myDataRef = new Firebase('https://https://mingoo.firebaseio.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+            var email = $('#emailInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
+      
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>

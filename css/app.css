@@ -330,7 +330,6 @@ container {
 form {
   margin: 0 auto;
   width: 343px;
-  height: 333px;
   padding: 30px;
   border: 1px solid rgba(0, 0, 0, .2);
   -moz-border-radius: 5px;
@@ -524,6 +523,7 @@ textarea:focus {
 
 
 .footer {
+        padding-top: 10%;
   background: url('https://s3.amazonaws.com/codecademy-content/projects/move/footer.jpg');
     position: relative;
     top: 85%;

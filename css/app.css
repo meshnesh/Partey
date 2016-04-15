@@ -271,3 +271,49 @@ container {
 
 
 /*END OF CARD VIEW*/
+
+
+/*ABOUT SECTION*/
+/* Feature */
+.feature {
+    position: relative;
+    top: 85%;
+  background: url('https://s3.amazonaws.com/codecademy-content/projects/move/feature.jpg');
+  background-size: cover;
+  height: 600px;
+}
+
+.feature h1,
+.feature h2 {
+  color: #fff;
+  font-size: 60px;
+  margin: 0;
+  padding:150px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feature p {
+  color: #fff;
+  font-size: 30px;
+  margin: 0;
+  padding:150px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+.btn-white {
+	background-color: white;
+  color: #1c1c1c;
+	font-size: 18px;
+  padding: 6px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 300px;
+  
+}
+
+/*END OF ABOUT SECTION*/
+

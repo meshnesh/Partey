@@ -4,4 +4,5 @@ import views
 
 urlpatterns = [
     url(r'^$', views.home, name="home"),
+    url(r'^events/', include('swingtime.urls')),
     ]

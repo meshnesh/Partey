@@ -1,17 +1,5 @@
-{% load staticfiles %}
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mingoo</title>
-    <link rel="stylesheet" href="{% static 'css/foundation.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/app.css' %}" />
-      <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-  </head>
-  <body>
-
+{% extends 'base.html' %}
+{% block content %}
       
 <!--      MAIN LANDING PAGE-->
       
@@ -152,31 +140,4 @@
       
 <!--      END OF FOOTER-->
       
-    
-<script>
-      var myDataRef = new Firebase('https://https://mingoo.firebaseio.com/');
-      $('#messageInput').keypress(function (e) {
-        if (e.keyCode == 13) {
-          var name = $('#nameInput').val();
-            var email = $('#emailInput').val();
-          var text = $('#messageInput').val();
-          myDataRef.push({name: name, text: text});
-          $('#messageInput').val('');
-        }
-      });
-      myDataRef.on('child_added', function(snapshot) {
-        var message = snapshot.val();
-        displayChatMessage(message.name, message.text);
-      });
-      function displayChatMessage(name, text) {
-        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-      };
-    </script>
-      
-    <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
-    <script src="{% static 'js/vendor/what-input.min.js' %}"></script>
-    <script src="{% static 'js/foundation.min.js' %}"></script>
-    <script src="{% static 'js/app1.js' %}"></script>
-  </body>
-</html>
+ {% endblock %}

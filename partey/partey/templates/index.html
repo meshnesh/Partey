@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -5,8 +6,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mingoo</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" />
       <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   </head>
   <body>
@@ -35,12 +36,12 @@
     
     
    <div class="main">
-		<div class="container">
-			<h1>Mingoo</h1>
-			<p>Find, Connect and have lots of fun.</p>
-			<a class="btn-start" href="#">Start Now</a>
-		</div>
-	</div>
+    <div class="container">
+      <h1>Mingoo</h1>
+      <p>Find, Connect and have lots of fun.</p>
+      <a class="btn-start" href="#">Start Now</a>
+    </div>
+  </div>
     
     
 
@@ -59,11 +60,11 @@
 <!--        <span class="title"></span>-->
       </div>
       <div class="col">
-				<h2>Food / Eatery</h2>
-				<p>
+        <h2>Food / Eatery</h2>
+        <p>
                     Events associated with food all around located in one place.
                 </p>
-			</div>
+      </div>
     </div>
   </div>
   
@@ -77,11 +78,11 @@
 <!--        <span class="title">Road Warrior</span>-->
       </div>
       <div class="col2">
-				<h2>Adventure</h2>
-				<p>
+        <h2>Adventure</h2>
+        <p>
                     Join other people in their hiking events by searching and joining in.
                 </p>
-			</div>
+      </div>
      
     </div>
   </div>
@@ -93,8 +94,8 @@
 <!--        <span class="title">Road Warrior</span>-->
       </div>
       <div class="col">
-				<h2>Night Out</h2>
-				<p>
+        <h2>Night Out</h2>
+        <p>
                     Get the info, look for parties happening at night and join in the fun and mingle.
                 </p>
         </div>
@@ -103,7 +104,7 @@
   </div>
 
 
-			<div class="clearfix"></div>
+      <div class="clearfix"></div>
     </div>
 </div>
       
@@ -114,11 +115,11 @@
       
 <!--      ABOUT US SECTION-->
       <div class="feature">
-		<div class="container">
+    <div class="container">
             <h1>About us</h1>
             <p>The Mingoo is an online plartform that notifies you of all kinds of events that happen around major Towns in kenya when and where they will happen and what to expect at the events.</p>
-		</div>
-	</div>
+    </div>
+  </div>
       
 <!--      END OF ABOUT US SECTION-->
       
@@ -129,7 +130,7 @@
         
 <!--        CONTACT FORM-->
 
-<!--			<a class="btn-white" href="#">Submit</a>-->
+<!--      <a class="btn-white" href="#">Submit</a>-->
     </div>
 </div>
       
@@ -137,17 +138,17 @@
       
       
 <!--      FOOTER-->
-      	<div class="footer">
-		<div class="container">
+        <div class="footer">
+    <div class="container">
             <div id="messageInput"></div>
-			<form>
+      <form>
   <input name="name" id="nameInput"placeholder="What is your name?" class="name" required />
   <input name="emailaddress" id="emailInput"placeholder="What is your email?" class="email" type="email" required />
   <textarea rows="4" cols="50" id="messageInput"name="subject" placeholder="Please enter your message" class="message" required></textarea>
   <input name="submit" class="btn" type="submit" value="Send" />
 </form>
-		</div>
-	</div>
+    </div>
+  </div>
       
 <!--      END OF FOOTER-->
       
@@ -173,9 +174,9 @@
       };
     </script>
       
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/what-input.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/app1.js"></script>
+    <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
+    <script src="{% static 'js/vendor/what-input.min.js' %}"></script>
+    <script src="{% static 'js/foundation.min.js' %}"></script>
+    <script src="{% static 'js/app1.js' %}"></script>
   </body>
 </html>

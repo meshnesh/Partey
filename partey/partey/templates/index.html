@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block content %}
+{% block main_content %}
       
 <!--      MAIN LANDING PAGE-->
       
@@ -41,6 +41,7 @@
             
 <div class="supporting">
 <div class="container">      
+{% for event in event_type %}    
 <div class="medium-4 columns">
 <div class="card">
       <div class="image">
@@ -48,50 +49,12 @@
 <!--        <span class="title"></span>-->
       </div>
       <div class="col">
-        <h2>Food / Eatery</h2>
-        <p>
-                    Events associated with food all around located in one place.
-                </p>
+        <a href="{% url 'events' event.abbr %}"><h2>{{ event.label }}</h2></a>
+        <p>{{ event.description }}</p>
       </div>
     </div>
   </div>
-  
-      
-<!--      EVENTS SECTION-->
-      
-<div class="medium-4 columns">
-<div class="card">
-      <div class="image">
-        <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
-<!--        <span class="title">Road Warrior</span>-->
-      </div>
-      <div class="col2">
-        <h2>Adventure</h2>
-        <p>
-                    Join other people in their hiking events by searching and joining in.
-                </p>
-      </div>
-     
-    </div>
-  </div>
-
-<div class="medium-4 columns">
-    <div class="card">
-      <div class="image">
-        <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
-<!--        <span class="title">Road Warrior</span>-->
-      </div>
-      <div class="col">
-        <h2>Night Out</h2>
-        <p>
-                    Get the info, look for parties happening at night and join in the fun and mingle.
-                </p>
-        </div>
-     
-    </div>
-  </div>
-
-
+  {% endfor %}
       <div class="clearfix"></div>
     </div>
 </div>
@@ -140,4 +103,27 @@
       
 <!--      END OF FOOTER-->
       
+ {% endblock %}
+ {% block js %}
+
+<script>
+      var myDataRef = new Firebase('https://https://mingoo.firebaseio.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+            var email = $('#emailInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
  {% endblock %}

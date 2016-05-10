@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Upcoming {{ event_type }} Events{% endblock %}
 {% block main_content %}
+{% include "event_nav.html" %}
     <h3>Upcoming {{ event_type }} </h3>
     <ul>
         {% for o in occurrences %}

@@ -58,6 +58,7 @@ class EventType(models.Model):
     '''
     abbr = models.CharField(_('abbreviation'), max_length=4, unique=True)
     label = models.CharField(_('label'), max_length=50)
+    description = models.TextField()
 
     #===========================================================================
     class Meta:

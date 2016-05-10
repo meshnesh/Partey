@@ -1,0 +1,1 @@
+web: gunicorn partey.wsgi --log-file -

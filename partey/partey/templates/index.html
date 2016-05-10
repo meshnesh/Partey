@@ -1,0 +1,181 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mingoo</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/app.css" />
+      <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  </head>
+  <body>
+
+      
+<!--      MAIN LANDING PAGE-->
+      
+<!--      OFF-CANVAS-->
+<aside class="container">
+  <input type="checkbox" id="menu__trigger">
+  <section class="menu">
+<!--    <label for="menu__trigger" class="entypo-cancel"></label>-->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Events</a>
+      <a href="#">Login/ Sign UP</a>
+      <a href="#">Post</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </section>
+  <!--     END OF OFF-CANVAS-->
+  <section class="content">
+    <label for="menu__trigger" class="entypo-menu">Menu</label>
+    
+    
+    
+   <div class="main">
+		<div class="container">
+			<h1>Mingoo</h1>
+			<p>Find, Connect and have lots of fun.</p>
+			<a class="btn-start" href="#">Start Now</a>
+		</div>
+	</div>
+    
+    
+
+  </section>
+</aside>
+<!--      END OF MAIN CONTENT-->
+      
+<!--      END OF LANDING PAGE-->
+            
+<div class="supporting">
+<div class="container">      
+<div class="medium-4 columns">
+<div class="card">
+      <div class="image">
+        <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
+<!--        <span class="title"></span>-->
+      </div>
+      <div class="col">
+				<h2>Food / Eatery</h2>
+				<p>
+                    Events associated with food all around located in one place.
+                </p>
+			</div>
+    </div>
+  </div>
+  
+      
+<!--      EVENTS SECTION-->
+      
+<div class="medium-4 columns">
+<div class="card">
+      <div class="image">
+        <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
+<!--        <span class="title">Road Warrior</span>-->
+      </div>
+      <div class="col2">
+				<h2>Adventure</h2>
+				<p>
+                    Join other people in their hiking events by searching and joining in.
+                </p>
+			</div>
+     
+    </div>
+  </div>
+
+<div class="medium-4 columns">
+    <div class="card">
+      <div class="image">
+        <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
+<!--        <span class="title">Road Warrior</span>-->
+      </div>
+      <div class="col">
+				<h2>Night Out</h2>
+				<p>
+                    Get the info, look for parties happening at night and join in the fun and mingle.
+                </p>
+        </div>
+     
+    </div>
+  </div>
+
+
+			<div class="clearfix"></div>
+    </div>
+</div>
+      
+      
+<!--      END OF EVENTS SECTION-->
+      
+      
+      
+<!--      ABOUT US SECTION-->
+      <div class="feature">
+		<div class="container">
+            <h1>About us</h1>
+            <p>The Mingoo is an online plartform that notifies you of all kinds of events that happen around major Towns in kenya when and where they will happen and what to expect at the events.</p>
+		</div>
+	</div>
+      
+<!--      END OF ABOUT US SECTION-->
+      
+<!--      CONTACT US SECTION-->
+      
+<div class="supporting">
+    <div class="container">
+        
+<!--        CONTACT FORM-->
+
+<!--			<a class="btn-white" href="#">Submit</a>-->
+    </div>
+</div>
+      
+<!--      END OF CONTACT SECTION-->
+      
+      
+<!--      FOOTER-->
+      	<div class="footer">
+		<div class="container">
+            <div id="messageInput"></div>
+			<form>
+  <input name="name" id="nameInput"placeholder="What is your name?" class="name" required />
+  <input name="emailaddress" id="emailInput"placeholder="What is your email?" class="email" type="email" required />
+  <textarea rows="4" cols="50" id="messageInput"name="subject" placeholder="Please enter your message" class="message" required></textarea>
+  <input name="submit" class="btn" type="submit" value="Send" />
+</form>
+		</div>
+	</div>
+      
+<!--      END OF FOOTER-->
+      
+    
+<script>
+      var myDataRef = new Firebase('https://https://mingoo.firebaseio.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+            var email = $('#emailInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
+      
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/app1.js"></script>
+  </body>
+</html>

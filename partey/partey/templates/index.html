@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% block main_content %}
+      
+<!--      MAIN LANDING PAGE-->
+      
+<!--      OFF-CANVAS-->
+<aside class="container">
+  <input type="checkbox" id="menu__trigger">
+  <section class="menu">
+<!--    <label for="menu__trigger" class="entypo-cancel"></label>-->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Events</a>
+      <a href="#">Login/ Sign UP</a>
+      <a href="#">Post</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </section>
+  <!--     END OF OFF-CANVAS-->
+  <section class="content">
+    <label for="menu__trigger" class="entypo-menu">Menu</label>
+    
+    
+    
+   <div class="main">
+    <div class="container">
+      <h1>Mingoo</h1>
+      <p>Find, Connect and have lots of fun.</p>
+      <a class="btn-start" href="#">Start Now</a>
+    </div>
+  </div>
+    
+    
+
+  </section>
+</aside>
+<!--      END OF MAIN CONTENT-->
+      
+<!--      END OF LANDING PAGE-->
+            
+<div class="supporting">
+<div class="container">      
+{% for event in event_type %}    
+<div class="medium-4 columns">
+<div class="card">
+      <div class="image">
+        <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
+<!--        <span class="title"></span>-->
+      </div>
+      <div class="col">
+        <a href="{% url 'events' event.abbr %}"><h2>{{ event.label }}</h2></a>
+        <p>{{ event.description }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+      <div class="clearfix"></div>
+    </div>
+</div>
+      
+      
+<!--      END OF EVENTS SECTION-->
+      
+      
+      
+<!--      ABOUT US SECTION-->
+      <div class="feature">
+    <div class="container">
+            <h1>About us</h1>
+            <p>The Mingoo is an online plartform that notifies you of all kinds of events that happen around major Towns in kenya when and where they will happen and what to expect at the events.</p>
+    </div>
+  </div>
+      
+<!--      END OF ABOUT US SECTION-->
+      
+<!--      CONTACT US SECTION-->
+      
+<div class="supporting">
+    <div class="container">
+        
+<!--        CONTACT FORM-->
+
+<!--      <a class="btn-white" href="#">Submit</a>-->
+    </div>
+</div>
+      
+<!--      END OF CONTACT SECTION-->
+      
+      
+<!--      FOOTER-->
+        <div class="footer">
+    <div class="container">
+            <div id="messageInput"></div>
+      <form>
+  <input name="name" id="nameInput"placeholder="What is your name?" class="name" required />
+  <input name="emailaddress" id="emailInput"placeholder="What is your email?" class="email" type="email" required />
+  <textarea rows="4" cols="50" id="messageInput"name="subject" placeholder="Please enter your message" class="message" required></textarea>
+  <input name="submit" class="btn" type="submit" value="Send" />
+</form>
+    </div>
+  </div>
+      
+<!--      END OF FOOTER-->
+      
+ {% endblock %}
+ {% block js %}
+
+<script>
+      var myDataRef = new Firebase('https://https://mingoo.firebaseio.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+            var email = $('#emailInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
+ {% endblock %}

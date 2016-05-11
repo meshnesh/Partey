@@ -1,0 +1,564 @@
+
+
+html body input[type="checkbox"] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  display: none;
+}
+.menu nav a:nth-child(1) {
+     margin-top: 5%;
+}
+html body input[type="checkbox"]:checked ~ .menu nav a {
+       
+  -webkit-transform: translate3d(0px, 0, 0) rotateY(0deg);
+  transform: translate3d(0px, 0, 0) rotateY(0deg);
+  -webkite-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background: #452B00;
+  color: #fff;
+}
+html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(2) {
+  -webkit-transition-delay: .1s;
+  transition-delay: .1s;
+}
+html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(3) {
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
+}
+html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(4) {
+  -webkit-transition-delay: .3s;
+  transition-delay: 0.3s;
+}
+html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(5) {
+  -webkit-transition-delay: .4s;
+  transition-delay: .4s;
+}
+html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(6) {
+  -webkit-transition-delay: .5s;
+  transition-delay: 0.5s;
+}
+html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(7) {
+  -webkit-transition-delay: .6s;
+  transition-delay: 0.6s;
+}
+html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(8) {
+  -webkit-transition-delay: .7s;
+  transition-delay: 0.7s;
+}
+.menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  min-height: 100%;
+}
+.menu nav {
+  padding-top: 4rem;
+  -webkit-perspective: 20rem;
+  perspective: 20rem;
+}
+.menu nav a {
+  display: block;
+  width: 12rem;
+  padding: 1.25rem 0rem 1.25rem 1.75rem;
+  background: #222;
+  border-bottom: 1px solid #2a2a2a;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15), inset 2px 0 0 #fff;
+  color: #fff;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  font-size: 1.25rem;
+  -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg);
+  transform: translate3d(-100%, 0, 0) rotateY(90deg);
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+.menu nav a:nth-child(1) {
+  -webkit-transition-delay: .235s;
+  transition-delay: .235s;
+}
+.menu nav a:nth-child(2) {
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
+}
+.menu nav a:nth-child(3) {
+  -webkit-transition-delay: .165s;
+  transition-delay: .165s;
+}
+.menu nav a:nth-child(4) {
+  -webkit-transition-delay: .13s;
+  transition-delay: .13s;
+}
+.menu nav a:nth-child(5) {
+  -webkit-transition-delay: .095s;
+  transition-delay: .095s;
+}
+.menu nav a:nth-child(6) {
+  -webkit-transition-delay: .06s;
+  transition-delay: .06s;
+}
+.menu nav a:nth-child(7) {
+  -webkit-transition-delay: .25s;
+  transition-delay: .025s;
+}
+.content {
+  position: absolute;
+  min-width: 100%;
+  display: table;
+
+}
+
+.content label {
+    margin-left: 4%;
+        top: 1%;
+        border-radius: 5%;
+  position: fixed;
+  z-index: 1000;
+  padding: 1rem 1.5rem;
+  background: #222;
+    opacity: .7;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+/*CONTENT AREA*/
+
+
+/* Main */
+.main {
+  background: url('https://s3.amazonaws.com/codecademy-content/projects/move/bg.jpg');
+  background-size: center;
+  color: white;
+  height: 600px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.main h1 {
+  font-size: 150px;
+  text-transform: uppercase;
+  margin: 0px;
+	padding: 50px 0 0 0;
+}
+
+.main p {
+  font-size: 25px;
+  margin: 0px;
+	padding: 0 0 20px 0;
+}
+
+.btn-start {
+	background-color: #1c1c1c;
+    border-radius: 15px;
+	   font-size: 30px;
+  text-transform: uppercase;
+  padding: 6px 25px;
+ 
+}
+
+/*EVENT SECTION*/
+container {
+  width: 100%;
+}
+
+/* Supporting */
+.supporting {
+    top: 85%;
+    position: relative;
+  background-color: #1c1c1c;
+  text-align: center;
+
+}
+
+.supporting .col {
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+
+.supporting .col2 {
+	float: left;
+  width: 100%;
+	margin: 0 0 0 15px;
+  padding: 10px;
+}
+
+.supporting .col3 {
+	float: right;
+  width: 100%;
+  padding: 10px;
+}
+
+.supporting h1,
+.supporting h2 {
+  color: #ffa800;
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.supporting p {
+  color: #efefef;
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.supporting .btn {
+  background-color: #eee;
+  color: #1c1c1c;
+  font-size: 18px;
+  padding: 8px 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+
+/*CARD VIEW*/
+
+.card {
+    padding-top: 5%;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #272727;
+  border-radius: 2px; }
+  .card .title {
+    line-height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300; }
+  .card .content {
+    padding: 1.3rem;
+    font-weight: 300;
+    border-radius: 0 0 2px 2px; }
+  .card p {
+      text-align: center;
+    margin: 0; }
+  .card .action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 1.3rem; }
+  .card a {
+    color: #ffab40;
+    margin-right: 1.3rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none; }
+  .card .image {
+    position: relative; }
+    .card .image .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1.3rem;
+      color: #fff; }
+    .card .image img {
+      border-radius: 2px 2px 0 0; }
+
+
+/*END OF CARD VIEW*/
+
+
+/*ABOUT SECTION*/
+/* Feature */
+.feature {
+    position: relative;
+    top: 85%;
+  background: url('https://s3.amazonaws.com/codecademy-content/projects/move/feature.jpg');
+  background-size: cover;
+  height: 600px;
+}
+
+.feature h1,
+.feature h2 {
+  color: #fff;
+  font-size: 60px;
+  margin: 0;
+  padding:150px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feature p {
+  color: #fff;
+  font-size: 30px;
+  margin: 0;
+  padding:150px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+.btn-white {
+	background-color: white;
+  color: #1c1c1c;
+	font-size: 18px;
+  padding: 6px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 300px;
+  
+}
+
+/*END OF ABOUT SECTION*/
+
+
+
+
+
+
+
+
+
+/*CONTACT SECTION*/
+
+form {
+  margin: 0 auto;
+  width: 343px;
+  padding: 30px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 13px 3px rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 13px 3px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 13px 3px rgba(0, 0, 0, .5);
+  overflow: hidden;
+}
+
+textarea {
+  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
+  width: 276px;
+  height: 110px;
+  border: 1px solid rgba(255, 255, 255, .6);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  padding-left: 45px;
+  padding-right: 20px;
+  padding-top: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+input {
+  width: 276px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, .4);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+input.name {
+  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_name.png) no-repeat scroll 16px 16px;
+  padding-left: 45px;
+}
+
+input.email {
+  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_email.png) no-repeat scroll 16px 20px;
+  padding-left: 45px;
+}
+
+input.message {
+  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
+  padding-left: 45px;
+}
+
+
+
+/*
+input.email{
+    background-color: transparent;
+}
+*/
+
+
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+:-moz-placeholder {
+  color: #fff;
+}
+
+::-moz-placeholder {
+  color: #fff;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 5px 1px rgba(255, 255, 255, .5);
+  -webkit-box-shadow: 0 0 5px 1px rgba(255, 255, 255, .5);
+  box-shadow: 0 0 5px 1px rgba(255, 255, 255, .5);
+  overflow: hidden;
+}
+
+.btn {
+  width: 138px;
+  height: 44px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  float: right;
+  border: 1px solid #253737;
+  background: #ffab40;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6da5a3), to(#416b68));
+  background: -webkit-linear-gradient(top, #6da5a3, #416b68);
+  background: -moz-linear-gradient(top, #6da5a3, #416b68);
+  background: -ms-linear-gradient(top, #6da5a3, #416b68);
+  background: -o-linear-gradient(top, #6da5a3, #416b68);
+  background-image: -ms-linear-gradient(top, #6da5a3 0%, #416b68 100%);
+  padding: 10.5px 21px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, inset rgba(255, 255, 255, 0.7) 0 1px 0;
+  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, inset rgba(255, 255, 255, 0.7) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, inset rgba(255, 255, 255, 0.7) 0 1px 0;
+  text-shadow: #333333 0 1px 0;
+  color: #e1e1e1;
+}
+
+.btn:hover {
+  border: 1px solid #253737;
+  text-shadow: #333333 0 1px 0;
+  background: #416b68;
+  background: -webkit-gradient(linear, left top, left bottom, from(#77b2b0), to(#416b68));
+  background: -webkit-linear-gradient(top, #77b2b0, #416b68);
+  background: -moz-linear-gradient(top, #77b2b0, #416b68);
+  background: -ms-linear-gradient(top, #77b2b0, #416b68);
+  background: -o-linear-gradient(top, #77b2b0, #416b68);
+  background-image: -ms-linear-gradient(top, #77b2b0 0%, #416b68 100%);
+  color: #fff;
+}
+
+/*
+.btn:active {
+  margin-top: 1px;
+  text-shadow: #333333 0 -1px 0;
+  border: 1px solid #253737;
+  background: #6da5a3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#416b68), to(#416b68));
+  background: -webkit-linear-gradient(top, #416b68, #609391);
+  background: -moz-linear-gradient(top, #416b68, #6da5a3);
+  background: -ms-linear-gradient(top, #416b68, #6da5a3);
+  background: -o-linear-gradient(top, #416b68, #6da5a3);
+  background-image: -ms-linear-gradient(top, #416b68 0%, #6da5a3 100%);
+  color: #fff;
+  -webkit-box-shadow: rgba(255, 255, 255, 0) 0 1px 0, inset rgba(255, 255, 255, 0.7) 0 1px 0;
+  -moz-box-shadow: rgba(255, 255, 255, 0) 0 1px 0, inset rgba(255, 255, 255, 0.7) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0) 0 1px 0, inset rgba(255, 255, 255, 0.7) 0 1px 0;
+}
+*/
+/*END OF CONTACT FORM*/
+
+
+
+
+@media (min-width:600px) {
+  .main h1 {
+    font-size: 200px;
+  }
+
+/*
+  .supporting .col {
+    width: 30%;
+  }
+*/
+
+  .supporting h2 {
+    font-size: 40px;
+  }
+
+  .supporting p {
+    font-size: 14px;
+  }
+
+  .feature h2 {
+    font-size: 60px;
+  }
+}
+
+.medium-4{
+    padding-bottom: 2%;
+}
+
+
+
+
+
+
+
+.footer {
+        padding-top: 10%;
+  background: url('https://s3.amazonaws.com/codecademy-content/projects/move/footer.jpg');
+    position: relative;
+    top: 85%;
+	background-size: cover;
+  height: 600px;
+ 	text-align: center;
+}
+
+.footer h1,
+.footer h2 {
+  color: #fff;
+  font-size: 40px;
+  margin: 0 0 20px 0;
+  padding:300px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer p {
+  color: #fff;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+}

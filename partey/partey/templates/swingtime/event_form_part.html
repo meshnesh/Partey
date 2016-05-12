@@ -6,3 +6,19 @@
                 {{ event_form.title }}</td></tr>
         <tr><th>{{ event_form.description.label_tag }}</th>
             <td>{{ event_form.description }}</td></tr>
+<tr><th>{{ recurrence_form.day.label_tag}}</th>
+            <td>{{ recurrence_form.day }}</td></tr>
+        <tr><th>{{ recurrence_form.start_time_delta.label_tag }}</th>
+            <td>{{ recurrence_form.start_time_delta }}</td></tr>
+        <tr><th>{{ recurrence_form.end_time_delta.label_tag }}</th>
+            <td>{{ recurrence_form.end_time_delta }}</td></tr>
+
+         <tr>
+         <th>Recurrence: </th>
+         <td>
+         <label>
+         Click the checkbox if your event recurs: 
+        <input type="checkbox" name="occur" id="occur" value="occur">
+        </label>
+        </td>
+        </tr>

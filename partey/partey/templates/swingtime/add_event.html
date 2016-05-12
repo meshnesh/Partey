@@ -9,6 +9,7 @@
     <p class="form-errors">Please fix any errors.</p>
     {% endif %}
     <form method="post" action="">
+    {% csrf_token %}
     <table>
         <tfoot>
             <tr>
@@ -17,9 +18,30 @@
         </tfoot>
         <tbody>
         {% include "swingtime/event_form_part.html" %}
+        
         {% include "swingtime/recurring_form_part.html" %}
         </tbody>
     </table>
     </form>
-
+{% endblock %}
+{% block js %}
+<script type="text/javascript">
+    $(window).load(function(){
+        var occurrence = $('#occur');
+        var form = $('.occurrences_form');
+        form.hide();
+        occurrence.change(function(){
+            if(occurrence.val() == "occur"){
+                occurrence.val("checked");
+                form.show();
+                console.log(occurrence.val());
+            } else {
+                occurrence.val("occur");
+                $('#occurrences_form').empty();
+                form.hide();
+                console.log(occurrence.val());
+            }
+        });
+    });
+    </script>
 {% endblock %}

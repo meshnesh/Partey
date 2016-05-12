@@ -1,0 +1,80 @@
+a{
+	color: #ffa800;
+}
+a:hover{
+	color: #ffa800;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	color: #fff;
+}
+.event-container{
+	background: #1c1c1c;
+	min-height: 100vh;
+}
+thead{
+	background-color: #ffa800;
+}
+.calendar { width: 100%; }
+.calendar td, .calendar th { width: 20%; padding: 4px; }
+.month-view { width: 100%; }
+.month-view td { 
+	vertical-align: top;
+	height: 10em;
+	background: #1c1c1c;
+	border: 1px solid #ffa800;  }
+.month-view td, .month-view th { width: 14.285%; }
+.month-view .day-ordinal { font-weight: bold; font-size: 1.1em; text-align: right; }
+.month-view ul { margin: 1px 2px; padding: 0; padding-left: 1em; }
+.month-view li { font-size: .9em; }
+.month-view .today { background-color: #333; }
+.month-view .event-times {  }
+.month-divider th, .month-divider td { border-top: 3px solid #8e8f80; }
+
+.event-container form table { width: 100%; border: 1px solid #aaa; }
+.event-container form table ul { margin: 0; padding: 0;}
+.event-container form table li { list-style-type: none; margin-bottom: .5em; }
+.event-container form table th, form table td { padding: 8px; }
+.event-container form table th { text-align: right; width: 10em; }
+.event-container form tfoot td { text-align: center; background-color: #566; }
+.event-container form in
+.event-container a.plain { text-decoration: none; }
+.event-container .btn {
+display: inline-block;
+padding: 2px 8px;
+text-decoration: none;
+border: 1px solid #ccc;
+border-radius: 4px;
+background: #a9db80;
+background: -moz-linear-gradient(top,  #a9db80 0%, #96c56f 100%);
+background: -webkit-linear-gradient(top,  #a9db80 0%,#96c56f 100%);
+background: -ms-linear-gradient(top,  #a9db80 0%,#96c56f 100%);
+background: linear-gradient(to bottom,  #a9db80 0%,#96c56f 100%);
+}
+.event-container .btn:hover {
+background: #96c56f;
+background: -moz-linear-gradient(top,  #96c56f 0%, #a9db80 100%);
+background: -webkit-linear-gradient(top,  #96c56f 0%,#a9db80 100%);
+background: -ms-linear-gradient(top,  #96c56f 0%,#a9db80 100%);
+background: linear-gradient(to bottom,  #96c56f 0%,#a9db80 100%);
+}
+.event-container nav a.btn {
+display: block;
+width: 14em;
+margin: 1em auto;
+padding: 4px;
+text-align: center;
+}
+.event-container .errorlist { color: #af0917; font-weight: bold; }
+.event-container .form-errors { background: #baa; padding: 1em 4px; text-align: center; font-weight: bold; color: #af0917;}
+.event-container .form-indent { margin-left: 2.5em; }
+.event-container .horizontal { width: 30em; }
+.event-container .horizontal li { float: left; margin: 0; }
+.event-container .horizontal li label { width: 4em; display: block; float: left; }
+.event-container #recurrence-options { float: left; margin-left: 1em; }
+.event-container #recurrence-options li { margin-bottom: 4px; }

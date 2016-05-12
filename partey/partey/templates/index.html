@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block main_content %}
+{% block content %}
       
 <!--      MAIN LANDING PAGE-->
       
@@ -9,12 +9,12 @@
   <section class="menu">
 <!--    <label for="menu__trigger" class="entypo-cancel"></label>-->
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Events</a>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'swingtime-events' %}">Events</a>
       <a href="#">Login/ Sign UP</a>
       <a href="#">Post</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </section>
   <!--     END OF OFF-CANVAS-->
@@ -65,7 +65,7 @@
       
       
 <!--      ABOUT US SECTION-->
-      <div class="feature">
+      <div class="feature" id="about">
     <div class="container">
             <h1>About us</h1>
             <p>The Mingoo is an online plartform that notifies you of all kinds of events that happen around major Towns in kenya when and where they will happen and what to expect at the events.</p>
@@ -89,7 +89,7 @@
       
       
 <!--      FOOTER-->
-        <div class="footer">
+        <div class="footer" id="contact">
     <div class="container">
             <div id="messageInput"></div>
       <form>

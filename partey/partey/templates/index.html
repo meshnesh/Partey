@@ -107,6 +107,7 @@
  {% block js %}
 
 <script>
+$('.event-container').hide();
       var myDataRef = new Firebase('https://https://mingoo.firebaseio.com/');
       $('#messageInput').keypress(function (e) {
         if (e.keyCode == 13) {

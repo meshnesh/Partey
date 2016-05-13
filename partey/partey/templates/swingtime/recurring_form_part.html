@@ -1,11 +1,4 @@
-        <tr><th>{{ recurrence_form.day.label_tag}}</th>
-            <td>{{ recurrence_form.day }}</td></tr>
-        <tr><th>{{ recurrence_form.start_time_delta.label_tag }}</th>
-            <td>{{ recurrence_form.start_time_delta }}</td></tr>
-        <tr><th>{{ recurrence_form.end_time_delta.label_tag }}</th>
-            <td>{{ recurrence_form.end_time_delta }}</td></tr>
-
-        <tr><th>{{ recurrence_form.repeats.label_tag }}</th>
+        <tr class="occurrences_form"><th>{{ recurrence_form.repeats.label_tag }}</th>
             <td>
                 {{ recurrence_form.count.errors }}
                 <ul>
@@ -19,7 +12,7 @@
                         {{ recurrence_form.until }}</li>
                 </ul></td></tr>
 
-        <tr><th>{{ recurrence_form.freq.label_tag }}</th>
+        <tr class="occurrences_form"><th>{{ recurrence_form.freq.label_tag }}</th>
             <td>
                 {{ recurrence_form.interval.errors }}
                 <div style="float: left">Every {{ recurrence_form.interval }} </div>

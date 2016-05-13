@@ -1,15 +1,15 @@
 
 
-html body input[type="checkbox"] {
+.main-container  input[type="checkbox"] {
   position: absolute;
   height: 0;
   width: 0;
   display: none;
 }
-.menu nav a:nth-child(1) {
+.main-container .menu nav a:nth-child(1) {
      margin-top: 5%;
 }
-html body input[type="checkbox"]:checked ~ .menu nav a {
+.main-container  input[type="checkbox"]:checked ~ .menu nav a {
        
   -webkit-transform: translate3d(0px, 0, 0) rotateY(0deg);
   transform: translate3d(0px, 0, 0) rotateY(0deg);
@@ -20,31 +20,31 @@ html body input[type="checkbox"]:checked ~ .menu nav a {
   background: #452B00;
   color: #fff;
 }
-html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(2) {
+.main-container  input[type="checkbox"]:checked ~ .menu nav a:nth-child(2) {
   -webkit-transition-delay: .1s;
   transition-delay: .1s;
 }
-html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(3) {
+.main-container  input[type="checkbox"]:checked ~ .menu nav a:nth-child(3) {
   -webkit-transition-delay: .2s;
   transition-delay: .2s;
 }
-html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(4) {
+.main-container  input[type="checkbox"]:checked ~ .menu nav a:nth-child(4) {
   -webkit-transition-delay: .3s;
   transition-delay: 0.3s;
 }
-html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(5) {
+.main-container  input[type="checkbox"]:checked ~ .menu nav a:nth-child(5) {
   -webkit-transition-delay: .4s;
   transition-delay: .4s;
 }
-html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(6) {
+.main-container  input[type="checkbox"]:checked ~ .menu nav a:nth-child(6) {
   -webkit-transition-delay: .5s;
   transition-delay: 0.5s;
 }
-html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(7) {
+.main-container  input[type="checkbox"]:checked ~ .menu nav a:nth-child(7) {
   -webkit-transition-delay: .6s;
   transition-delay: 0.6s;
 }
-html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(8) {
+.main-container  input[type="checkbox"]:checked ~ .menu nav a:nth-child(8) {
   -webkit-transition-delay: .7s;
   transition-delay: 0.7s;
 }
@@ -109,7 +109,7 @@ html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(8) {
   transition-delay: .025s;
 }
 .content {
-  position: absolute;
+  position: relative;
   min-width: 100%;
   display: table;
 
@@ -149,19 +149,19 @@ html body input[type="checkbox"]:checked ~ .menu nav a:nth-child(8) {
   font-size: 150px;
   text-transform: uppercase;
   margin: 0px;
-	padding: 50px 0 0 0;
+  padding: 50px 0 0 0;
 }
 
 .main p {
   font-size: 25px;
   margin: 0px;
-	padding: 0 0 20px 0;
+  padding: 0 0 20px 0;
 }
 
 .btn-start {
-	background-color: #1c1c1c;
+  background-color: #1c1c1c;
     border-radius: 15px;
-	   font-size: 30px;
+     font-size: 30px;
   text-transform: uppercase;
   padding: 6px 25px;
  
@@ -188,14 +188,14 @@ container {
 }
 
 .supporting .col2 {
-	float: left;
+  float: left;
   width: 100%;
-	margin: 0 0 0 15px;
+  margin: 0 0 0 15px;
   padding: 10px;
 }
 
 .supporting .col3 {
-	float: right;
+  float: right;
   width: 100%;
   padding: 10px;
 }
@@ -306,9 +306,9 @@ container {
 
 
 .btn-white {
-	background-color: white;
+  background-color: white;
   color: #1c1c1c;
-	font-size: 18px;
+  font-size: 18px;
   padding: 6px 25px;
   text-decoration: none;
   text-transform: uppercase;
@@ -328,7 +328,7 @@ container {
 
 /*CONTACT SECTION*/
 
-form {
+#contact form {
   margin: 0 auto;
   width: 343px;
   padding: 30px;
@@ -346,7 +346,7 @@ form {
   overflow: hidden;
 }
 
-textarea {
+#contact textarea {
   background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
   width: 276px;
   height: 110px;
@@ -368,7 +368,7 @@ textarea {
   overflow: hidden;
 }
 
-input {
+#contact input {
   width: 276px;
   height: 48px;
   border: 1px solid rgba(255, 255, 255, .4);
@@ -387,21 +387,21 @@ input {
   margin-bottom: 20px;
 }
 
-input[type=submit] {
+#contact input[type=submit] {
   cursor: pointer;
 }
 
-input.name {
+#contact input.name {
   background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_name.png) no-repeat scroll 16px 16px;
   padding-left: 45px;
 }
 
-input.email {
+#contact input.email {
   background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_email.png) no-repeat scroll 16px 20px;
   padding-left: 45px;
 }
 
-input.message {
+#contact input.message {
   background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
   padding-left: 45px;
 }
@@ -432,8 +432,8 @@ input.email{
   color: #fff;
 }
 
-input:focus,
-textarea:focus {
+#contact input:focus,
+#contact textarea:focus {
   background-color: rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0 5px 1px rgba(255, 255, 255, .5);
   -webkit-box-shadow: 0 0 5px 1px rgba(255, 255, 255, .5);
@@ -542,9 +542,9 @@ textarea:focus {
   background: url('https://s3.amazonaws.com/codecademy-content/projects/move/footer.jpg');
     position: relative;
     top: 85%;
-	background-size: cover;
+  background-size: cover;
   height: 600px;
- 	text-align: center;
+  text-align: center;
 }
 
 .footer h1,

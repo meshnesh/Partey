@@ -8,13 +8,20 @@
     <title>{% block title %}Mingoo{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/foundation.css' %}" />
     <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/events.css' %}" />
     {% block css %}
     {% endblock %}
       <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   </head>
   <body>
+  <div class="main-container">
+  {% block content %}
+  {% endblock %}
+  </div>
+  <div class="event-container">
 {% block main_content %}
 {% endblock%}
+</div>
       
     <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
     <script src="{% static 'js/vendor/what-input.min.js' %}"></script>
